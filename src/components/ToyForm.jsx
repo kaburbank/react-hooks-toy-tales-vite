@@ -34,7 +34,7 @@ function ToyForm({ onAddToy }) {
     });
   };
   
-  // Render the ToyForm component
+  // Render the add toy component
   return (
     <div className="container">
       <form className="add-toy-form" onSubmit={handleSubmit}>
