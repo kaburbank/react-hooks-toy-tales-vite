@@ -20,13 +20,15 @@ function ToyForm({ onAddToy }) {
         likes: 0,
       }),
     })
-    .then((res) => res.json())
+    // process the response and update the toy list
+    .then((response) => response.json())
     .then((data) => {
       console.log(data);
       onAddToy(data);
       setName("");
       setImage("");
     })
+    // handle errors during toy creation
     .catch((error) => {
       console.error("Error creating toy:", error);
     });
